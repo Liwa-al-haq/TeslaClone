@@ -1,125 +1,258 @@
 @font-face {
     font-family: mySecondFont;
     src: url('../../assets/GothamBold.ttf');
-}
-#order_wrapper{
-   
+  }
+  
+  .order {
     display: flex;
-    justify-content:center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
+  
+  #order_wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
     align-items: flex-start;
-    #img_c_wrapper{
-        height: 1000px;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 50px;
+  
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+  
+  #img_c_wrapper {
+    width: 60%;
+  
+    img {
+      width: 100%;
+      max-width: 800px; /* Adjust the maximum width as needed */
+      height: auto;
+      object-fit: contain;
+    }
+  
+    div {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  
+  #order_sum {
+    width: 40%;
+  
+    h1#model_name {
+      display: flex;
+      justify-content: left;
+      font-family: mySecondFont;
+      font-weight: 400;
+      font-size: 35px;
+    }
+  
+    #date {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+  
+    div#c_con {
+      padding-left: 30px;
+  
+      p.p1 {
+        color: black;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: mySecondFont;
+      }
+    }
+  
+    #stats {
+      padding: 0;
+  
+      #sp_head,
+      #sp {
         display: flex;
-        flex-direction: column;
+        width: 400px;
+        justify-content: space-around;
+        margin-bottom: 10px;
+  
+        .h22 {
+          font-size: 20px;
+          display: flex;
+          justify-content: center;
+          width: 125px;
+        }
+  
+        .sp_des {
+          display: flex;
+          justify-content: center;
+          width: 125px;
+        }
+      }
+    }
+  
+    #en_auto {
+      margin-bottom: 40px;
+      padding-left: 15px;
+  
+      .f_con {
+        font-family: mySecondFont;
+      }
+  
+      div {
+        padding-left: 30px;
+      }
+    }
+  
+    .but11 {
+      height: 40px;
+      width: 150px;
+      font-family: mySecondFont;
+      border-radius: 25px;
+      font-size: 15px;
+      background-color: rgb(74, 124, 253);
+      color: white;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: rgba(74, 124, 253, 0.9);
+      }
+    }
+  
+    #mon_sum {
+      .tb_wr {
+        display: flex;
         justify-content: space-between;
-        align-items: center;
-        #car{
-            height:auto;
-            width:60vw;
-        }div{
-            font-size:20px;
-            margin:0;
-            padding:0;
-            display: flex;
-                justify-content: space-around;
-                align-items: center;
-        }
+      }
     }
-    #order_sum{
-        // margin-right: 10vw;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        #model_name{
-            display: flex;
-            justify-content: left;
-            font-family:mySecondFont;
-            font-weight: 400;
-            font-size: 35px;
+  
+    #order_wr {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+  
+      button#order_sub {
+        height: 50px;
+        width: 300px;
+        font-family: mySecondFont;
+        font-size: 25px;
+        border-radius: 25px;
+        background-color: rgb(74, 124, 253);
+        color: white;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: rgba(74, 124, 253, 0.9);
         }
-        #c_con{
-            
-            padding-left:30px;
-            p{
-                color: black;
-                text-decoration:none;
-                font-size: px;
-                font-family:mySecondFont;
-            }
-        }
-        #stats{
-            // display: flex;
-            // justify-content: left;
-            padding:0;
-        #sp_head,#sp{
-            display: flex;
-            width:400px;
-            justify-content: space-around;
-            margin-bottom: 10px;
-            .h22{
-                font-size: 20px;
-                display:flex;
-                justify-content: center;
-                width:125px;
-            }
-            .sp_des{
-                display: flex;
-                    justify-content: center;
-                    width: 125px;
-            }
-        }
+      }
     }
-        #en_auto{
-            margin-bottom: 40px;
-            // padding:15px;
-            
-            .f_con{
-                font-family: mySecondFont;
-            }
-            div{
-                padding-left:30px;
-            }
-        }
-        .but11{
-            height:40px;
-            width:150px;
-            font-family: mySecondFont;
-            border-radius: 25px;
-            font-size: 15px;
-            background-color: rgb(74, 124, 253);
-
-        }
-        #mon_sum{
-            // margin-top: 15px;
-            .tb_wr{
-                display: flex;
-                // width:400px;
-                justify-content: space-between;
-            }
-        }
-        #order_wr{
-            display: flex;
-            justify-content: center;
-            margin-bottom: 40px;
-            button{
-                height:50px;
-                    width: 300px;
-                    font-family: mySecondFont;
-                    font-size:25px;
-                    border-radius: 25px;
-                    background-color: rgb(74, 124, 253);
-            }
-        }
-        #stats{
-            margin-bottom: 40px;
-        }
-        #p_f{
-            font-size: 35px;
-            font-family: mySecondFont;
-        }
+  
+    #stats {
+      margin-bottom: 40px;
     }
-}
-.p12{
+  
+    #p_f {
+      font-size: 35px;
+      font-family: mySecondFont;
+    }
+  }
+  
+  .p12 {
     display: flex;
     justify-content: center;
-}
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #order_wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #order_wrapper {
+      margin-top: 20px;
+    }
+  
+    #order_sum {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #order_wrapper {
+      padding: 15px;
+    }
+  
+    #order_sum {
+      padding-left: 0;
+    }
+  
+    #en_auto {
+      div {
+        padding-left: 15px;
+      }
+    }
+  
+    .but11 {
+      height: 35px;
+      width: 120px;
+      font-size: 14px;
+    }
+  }
+  #img_c_wrapper {
+    width: 60%;
+    position: sticky;
+    top: 50px;
+  
+    /* Rest of the styles */
+  }
+  
+  #order_sum {
+    width: 40%;
+    position: relative;
+    z-index: 1;
+  
+    /* Rest of the styles */
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #order_wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    
+    #img_c_wrapper {
+      position: static;
+      top: auto;
+      width: 100%;
+    }
+    
+    #order_sum {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #order_wrapper {
+      margin-top: 20px;
+    }
+  }
