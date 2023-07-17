@@ -13,22 +13,28 @@
     margin-left: -180px;
 }
 
-.buttons a{
+.button{
     text-decoration: none;
     color:white;
-    font-size: 12px;
     text-align: center;
     
 }
 
+button{
+    border:none;
+    color:white;
+    font-size: 15px;
+    background-color:rgb(60, 60, 60) ;
+}
 .button_white{
     background-color: white;
     opacity: 0.65;
     margin-left: 20px;
 }
-
-.button_white a{
+.button_white button{
+    background-color: rgba(255,255,255,0.65);
     color:black;
+    font-size: 15px;
     font-weight: 500;
 }
 /* .button_uno{

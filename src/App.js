@@ -1,100 +1,36 @@
-import "./App.css";
-import Header from "./components/Header";
-import Footer from "./components/footer";
-import Item from "./components/item";
-import Accessories from "./assets/Desktop-Accessories.jpg";
-import ModelS from "./assets/Desktop-ModelS.jpeg";
-import Model3 from "./assets/Desktop-Model3.jpeg";
-import ModelX from "./assets/Desktop-ModelX.jpeg";
-import ModelY from "./assets/Desktop-ModelY.jpeg";
-import SolarPanels from "./assets/Desktop-SolarPanels.jpeg";
-import SolarRoof from "./assets/Desktop-SolarRoof.jpeg";
+// import "./App.css";
+import Home from "./pages/home/Home"
+import Login from "./pages/login/Login"
+import Order from "./pages/order/Order"
+import Order1 from './pages/order/Order1'
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { useContext } from "react";
+import { AuthContext } from "./contexts/AuthContext";
+import Sign_up from "./pages/signup/sign_up";
 function App() {
+  const { currentUser,currentToken } = useContext(AuthContext)
+  // const token = currentUser.stsTokenManager.accessToken
+  // console.log(token)
+  const RequireAuth = ({ children }) => {//if there is a current user logged in to the website it will unprotect all the routes or if there is no user logged in it will protect all routes 
+    console.log(currentToken)
+    return currentUser&&currentToken ? (children) : <Navigate to='/login' />//children here refers to child of RequiredAuth component i.e whichever homepage component u want to route to
+  }
   return (
-    <div className="App">
-      <Header />
-      <div className="app_itemsContainer">
-        <Item
-          title="Model 3"
-          desc="Order Online for Touchless Delivery"
-          desc_link=""
-          backgroundImg={Model3}
-          leftBtnTxt=" Custom Order"
-          leftBtnlink=""
-          rightBtnTxt="Learn More"
-          rightBtnlink=""
-          twoButtons="true"
-        />
-        <Item
-          title="Model S"
-          desc="Order Online for Touchless Delivery"
-          desc_link=""
-          backgroundImg={ModelS}
-          leftBtnTxt=" Custom Order"
-          leftBtnlink=""
-          rightBtnTxt="Learn More"
-          rightBtnlink=""
-          twoButtons="true"
-          first
-        />
-        <Item
-          title="Model X"
-          desc="Order Online for Touchless Delivery"
-          desc_link=""
-          backgroundImg={ModelX}
-          leftBtnTxt=" Custom Order"
-          leftBtnlink=""
-          rightBtnTxt="Learn More"
-          rightBtnlink=""
-          twoButtons="true"
-        />
-        <Item
-          title="Model Y"
-          desc="Order Online for Touchless Delivery"
-          desc_link=""
-          backgroundImg={ModelY}
-          leftBtnTxt=" Custom Order"
-          leftBtnlink=""
-          rightBtnTxt="Learn More"
-          rightBtnlink=""
-          twoButtons="true"
-        />
-        <Item
-          title="Solar Panels"
-          desc="Lowest Cost Solar Panels in America"
-          desc_link=""
-          backgroundImg={SolarPanels}
-          leftBtnTxt="Order Now"
-          leftBtnlink=""
-          rightBtnTxt="Learn More"
-          rightBtnlink=""
-          twoButtons="true"
-        />
-        <Item
-          title="Solar Roof"
-          desc="Produce Clean Energy From Your Roof"
-          desc_link=""
-          backgroundImg={SolarRoof}
-          leftBtnTxt="Order Now"
-          leftBtnlink=""
-          rightBtnTxt="Learn More"
-          rightBtnlink=""
-          twoButtons="true"
-        />
-        <Item
-          title="Accessories"
-          desc=""
-          desc_link=""
-          backgroundImg={Accessories}
-          leftBtnTxt=" Shop Now"
-          leftBtnlink=""
-          rightBtnTxt=""
-          rightBtnlink=""
-          twoButtons="false"
-        />
-      </div>
-      <Footer />
-    </div>
+  <div>
+    <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<RequireAuth><Home /></RequireAuth>} />
+          <Route path='/' >
+            <Route path='login' element={<Login />}></Route>
+            <Route path='signup' element={<Sign_up/>}></Route>
+            <Route path='home' element={<RequireAuth><Home /></RequireAuth>}></Route>
+            <Route path="order1" element={<Order />}></Route>
+            <Route path='order' element=
+            {<RequireAuth><Order1/></RequireAuth>}></Route>
+          </Route>
+      </Routes>
+      </BrowserRouter>
+  </div>
   );
 }
 
