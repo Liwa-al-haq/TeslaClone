@@ -1,0 +1,46 @@
+.rad_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    width: 350px;
+    box-sizing: border-box;
+  
+    .st_wrapper {
+      overflow: auto;
+  
+      input[type="radio"] {
+        position: absolute;
+        margin: 0;
+        box-sizing: inherit;
+      }
+  
+      input[type="radio"] {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        appearance: none;
+      }
+  
+      input[type="radio"]:checked + label {
+        border: solid 3px rgb(74, 124, 253);
+        border-radius: 50%;
+      }
+  
+      .rad_label {
+        margin: 0;
+        padding: 0;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        img {
+          height: 50px;
+          width: 50px;
+        }
+      }
+    }
+  }
+  

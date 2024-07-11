@@ -1,0 +1,37 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../assets/GothamBold.ttf);
+}
+#header_login{
+    display:flex;
+    justify-content:space-between;
+        z-index: 1;
+    #logo_wrapper{
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:54px;
+        width:144px;
+        padding-left: 20px;
+        margin:0;
+        svg{
+            width:120px;
+            height:24px;
+
+        }
+    }
+    button{
+        border:none;
+        background-color: white;
+        display: flex;
+        align-items: center;
+        margin:6px;
+        padding:4px 8px;
+        span{
+            font-family: myFirstFont;
+            font-size:14px;
+            margin:2px 4px;
+        }
+    }
+}

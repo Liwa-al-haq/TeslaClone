@@ -1,0 +1,241 @@
+
+.header{
+  display: flex;
+  background-color: transparent;
+  background: none;
+  position: fixed;
+  width:100vw;
+  top:0;
+  /* margin:15px; */
+  margin-top: 15px;
+  z-index: 100;
+}
+
+.header_logo {
+height: 100px;
+width: 120px;
+margin-left: 10px;
+}
+.header_logo a{
+text-decoration: none;
+color: black;
+} 
+.header_center {
+flex: 1;
+display: flex;
+margin-left: 330px;
+}
+
+.header_center p {
+margin: 10px;
+font-weight: 500;
+font-size: 16px;
+margin-left: 18px;
+margin-top: 4px;
+animation: 0.5s slideMenu linear forwards;
+}
+
+.header_center a {
+color: black;
+text-decoration: none;
+margin-bottom: 200px;
+animation: 0.5s slideMenuBg linear forwards;
+}
+
+.header_right {
+display: flex;
+justify-content: flex-end;
+margin-right: 24px;
+}
+
+.header_right p {
+margin: 10px;
+font-weight: 500;
+font-size: 16px;
+margin-left: 10px;
+margin-top: 4px;
+animation: 0.5s slideMenu linear forwards;
+}
+
+.header_right a {
+color: black;
+text-decoration: none;
+margin-bottom: 200px;
+animation: 0.5s slideMenuBg linear forwards;
+}
+
+aside {
+position: fixed;
+transition: right .4s ease;
+right: -400px;
+width: 215px;
+background-color: #fff;
+padding: 80px 40px;
+z-index: 4;
+height: 100vh;
+margin-top: -20px;
+}
+
+aside.active {
+right: 0;
+}
+
+aside a {
+display: block;
+color: inherit;
+text-decoration: none;
+padding: 9px 0;
+font-size: 16px;
+font-weight: 500;
+color: darkslategray;
+}
+
+aside button.close {
+font-size: 24px;
+border: 0;
+background-color: transparent;
+position: absolute;
+top: 10px;
+right: 10px;
+padding: 10px;
+font-family: sans-serif;
+font-weight: 100;
+cursor: pointer;
+color: black;
+}
+
+.backdrop {
+display: none;
+position: fixed;
+z-index: 3;
+inset: 0;
+background-color: rgba(0, 0, 0, 0);
+transition: background-color .4s ease;
+backdrop-filter: blur(5px);
+}
+
+.backdrop.active {
+display: block;
+background-color: rgba(0, 0, 0, .35);
+}
+
+.header_center a,
+.header_right a {
+position: relative;
+display: inline-block;
+transition: transform 0.3s ease;
+}
+
+.header_center a:before,
+.header_right a:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 100%;
+bottom: 0;
+background-color: #C8D4DC;
+z-index: -1;
+transition: right 0.3s ease;
+}
+
+.header_center a:hover:before,
+.header_right a:hover:before {
+right: 0;
+}
+
+
+@keyframes slideMenu {
+from {
+  transform: translateX(-100px);
+  opacity: 0;
+}
+to {
+  transform: translateX(0);
+  opacity: 1;
+}
+}
+
+/* Responsive Styles */
+@media (max-width: 1400px) {
+.header_center {
+  display: none;
+}
+.header_right {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+.header_logo {
+  margin-left: 20px;
+}
+
+
+
+}
+.header_center a:before,
+.header_right a:before {
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #C8D4DC;
+z-index: -1;
+transition: transform 0.3s ease;
+transform-origin: left;
+transform: scaleX(0);
+}
+
+.header_center a:hover:before,
+.header_right a:hover:before {
+transform: scaleX(1);
+}
+.user-info {
+position: relative;
+display: inline-block;
+cursor: pointer;
+}
+
+/* Styles for the logout dropdown */
+.logout-dropdown {
+position: absolute;
+/* top: 100%; */
+top: 15%;
+left: 50%;
+transform: translateX(-50%);
+background-color: #fff;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border-radius: 4px;
+padding: 8px;
+min-width: 120px;
+max-height: 10px;
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+transition: opacity 0.2s ease-in-out, visibility 0s linear 0.2s;
+}
+
+/* Show the logout dropdown on hover */
+.user-info:hover .logout-dropdown {
+opacity: 2;
+visibility: visible;
+pointer-events: auto;
+transition-delay: 1s;
+}
+
+/* Styles for logout link in the dropdown */
+.logout-link {
+display: block;
+color: #333;
+text-decoration: none;
+padding: 8px 0;
+bottom: 13px;
+}
+
+/* Adjust the logout link style when hovering */
+.logout-link:hover {
+background-color: none
+}
+

@@ -1,0 +1,340 @@
+@font-face {
+    font-family: mySecondFont;
+    src: url('../../assets/GothamBold.ttf');
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+  }
+  
+  .order {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f7f7f7;
+  }
+  
+  #order_wrapper {
+    width: 100%;
+    max-width: 1200px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-top: 50px;
+  }
+  .car-colors {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  #img_c_wrapper {
+    position: sticky;
+    top: 50px;
+    width: 60%;
+    max-width: 800px;
+  }
+  #img_c_wrapper {
+    width: 60%;
+  
+    img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      object-fit: contain;
+    }
+  
+    div {
+      font-size: 20px;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  
+  #order_sum {
+    width: 40%;
+  
+    h1#model_name {
+      display: flex;
+      justify-content: left;
+      font-family: mySecondFont;
+      font-weight: 400;
+      font-size: 35px;
+      margin-top: 0;
+    }
+  
+    #date {
+      font-size: 16px;
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+  
+    div#c_con {
+      padding-left: 30px;
+  
+      p.p1 {
+        color: #333;
+        text-decoration: none;
+        font-size: 18px;
+        font-family: mySecondFont;
+        margin-bottom: 10px;
+      }
+    }
+  
+    #stats {
+      padding: 0;
+  
+      #sp_head,
+      #sp {
+        display: flex;
+        width: 400px;
+        justify-content: space-around;
+        margin-bottom: 10px;
+  
+        .h22 {
+          font-size: 20px;
+          display: flex;
+          justify-content: center;
+          width: 125px;
+        }
+  
+        .sp_des {
+          display: flex;
+          justify-content: center;
+          width: 125px;
+        }
+      }
+    }
+  
+    #en_auto {
+      margin-bottom: 40px;
+      padding-left: 15px;
+  
+      .f_con {
+        font-family: mySecondFont;
+      }
+  
+      div {
+        padding-left: 30px;
+      }
+    }
+  
+    .but11 {
+      height: 40px;
+      width: 150px;
+      font-family: mySecondFont;
+      border-radius: 25px;
+      font-size: 15px;
+      background-color: rgb(74, 124, 253);
+      color: white;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: rgba(74, 124, 253, 0.9);
+      }
+    }
+  
+    #mon_sum {
+      .tb_wr {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  
+    #order_wr {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+  
+      button#order_sub {
+        height: 50px;
+        width: 300px;
+        font-family: mySecondFont;
+        font-size: 25px;
+        border-radius: 25px;
+        background-color: rgb(74, 124, 253);
+        color: white;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: rgba(74, 124, 253, 0.9);
+        }
+      }
+    }
+  
+    #stats {
+      margin-bottom: 40px;
+    }
+  
+    #p_f {
+      font-size: 35px;
+      font-family: mySecondFont;
+    }
+  }
+  
+  .p12 {
+    display: flex;
+    justify-content: center;
+  }
+  
+  @media screen and (max-width: 1200px) {
+    #order_wrapper {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #order_wrapper {
+      margin-top: 20px;
+    }
+  
+    #order_sum {
+      width: 100%;
+      margin-top: 30px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #order_wrapper {
+      padding: 15px;
+    }
+  
+    #order_sum {
+      padding-left: 0;
+    }
+  
+    #en_auto {
+      div {
+        padding-left: 15px;
+      }
+    }
+  
+    .but11 {
+      height: 35px;
+      width: 120px;
+      font-size: 14px;
+    }
+  }
+//   .order-wrapper {
+//     width: 100%;
+//     max-width: 1200px;
+//     margin: 50px auto;
+//     display: flex;
+//     flex-wrap: wrap;
+//     justify-content: space-between;
+//     background-color: white;
+//     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+//     padding: 30px;
+// }
+//useless ig
+.image-wrapper {
+    width: 60%;
+    max-width: 800px;
+    position: sticky;
+    top: 50px;
+    img {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        object-fit: contain;
+        margin-top: 800px;
+    }
+}
+
+//useless ig
+@media screen and (max-width: 768px) {
+  .order-wrapper {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .image-wrapper {
+      width: 100%;
+      position: static;
+      margin-bottom: 200px;
+      
+  }
+
+  .order-summary {
+      width: 100%;
+  }
+}
+
+// .image-wrapper{
+//   display: fixed;
+//   top: 500px;
+// }
+//useless
+// @media screen and (max-width: 768px) {
+//   .order-wrapper {
+//       flex-direction: column;
+//       align-items: center;
+//   }
+
+//   .image-wrapper {
+//       width: 100%;
+//       position: static;
+//       // margin-bottom: 200px;
+//   }
+
+//   .order-summary {
+//       width: 100%;
+//   }
+// }
+  
+@media (min-width: 1400px) {
+  .c_img{
+    margin-top: 160px;
+    // max-width: 2000px;
+    // box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    // z-index: 99;
+  }
+  
+}
+.c_img{
+  background-color: #f7f7f7;
+  // box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  //   z-index: 99;
+}
+@media(max-width:500px) {
+  .c_img{
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+    margin-top: 16px;
+  }
+}
+
+
+// .order_header{
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-self: center;
+// }
+
+// @media  screen and (max-width: 768px) {
+//   .order_header{
+//     margin-top: -200px;
+//     max-width: 5000px;
+//     z-index: 99; /* Ensure the white box is below the header */
+//     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+//   }
+  
+// }
+  
+

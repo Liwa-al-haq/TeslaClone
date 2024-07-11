@@ -1,0 +1,48 @@
+.button{
+    background-color: rgb(60, 60, 60);
+    height:40px;
+    width:256px;
+    margin-top: 600px;
+    margin-left:-570px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    opacity: 0.85;
+    color:white;
+    margin-left: -180px;
+}
+
+.button{
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    
+}
+
+button{
+    border:none;
+    color:white;
+    font-size: 15px;
+    background-color:rgb(60, 60, 60) ;
+}
+.button_white{
+    background-color: white;
+    opacity: 0.65;
+    margin-left: 20px;
+}
+.button_white button{
+    background-color: rgba(255,255,255,0.65);
+    color:black;
+    font-size: 15px;
+    font-weight: 500;
+}
+/* .button_uno{
+    color:red;
+    font-weight: 500;
+} */
+
+.center_single_button {
+    display: flex;
+    justify-content: center;
+  }

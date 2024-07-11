@@ -1,0 +1,90 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(../../assets/GothamBold.ttf);
+}
+* {
+    font-family: myFirstFont;
+}
+.wrapper{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.form_wrapper{
+    justify-content: left;
+    .head {
+            font-family: myFirstFont;
+            font-size: 15px;
+            margin-left: 30px;
+            margin-bottom: 10px;
+            color:rgb(101, 101, 103);
+        }
+}
+#or {
+    font-family: myFirstFont;
+    color: rgb(92, 93, 97);
+}
+
+#or_wrapper {
+    margin: 25px;
+    display: flex;
+    justify-content: center;
+}
+#Create{
+    margin:0px;
+    font-size: 25px;
+}
+#create_wrapper{
+    display:flex;
+    justify-content: left;
+    width:400px;
+    margin-bottom:25px;
+}
+.input_wrapper{
+    border-radius: 50px;
+        background-color: rgba(221, 214, 214, 0.4);
+        height: 40px;
+        width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    input{
+        border: none;
+            font-size: 15px;
+            font-family: myFirstFont;
+            background-color: rgba(221, 214, 214, 0.1);
+            height: 40px;
+            width: 300px;
+            
+    }
+    
+    
+}
+ #acc {
+     font-size: 15px;
+     color: white;
+     background-color: rgb(74, 124, 254);
+     border:none;
+ }
+
+ #acc_wrapper {
+     background-color: rgb(74, 124, 254);
+
+ }
+#signin_wrapper {
+    height: 40px;
+    font-family: myFirstFont;
+    font-size: 15px;
+    background-color: white;
+    border: solid 2px black;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+#signin_wrapper:hover {
+    background-color: black;
+    color: white;
+    transition: background-color 0.5s, color 0.5s;
+}
