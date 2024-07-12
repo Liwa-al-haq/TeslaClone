@@ -8,19 +8,19 @@ import { getAnalytics } from "firebase/analytics";
 // Your web app's Firebase configuration
 const firebaseConfig = {
 
-  apiKey: "AIzaSyBAPTPrWywWR8g91TktgoAtBxh862XfwNs",
+  apiKey: "",
 
-  authDomain: "teslaclone-f7987.firebaseapp.com",
+  authDomain: "",
 
-  projectId: "teslaclone-f7987",
+  projectId: "",
 
-  storageBucket: "teslaclone-f7987.appspot.com",
+  storageBucket: "",
 
-  messagingSenderId: "380432284928",
+  messagingSenderId: "",
 
-  appId: "1:380432284928:web:abcdfa050d84b18f8607e5",
+  appId: "",
 
-  measurementId: "G-LT1CS6VPY4"
+  measurementId: ""
 
 };
 
